@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Example</title>
+    <style>
+        input{
+        height:40px;
+        width:400px;
+        margin-left:50px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        }
+        #cc{
+        margin-left:80px;
+        }
+        #body{
+        margin-left:65px;
+        }
+        #btn{
+        height:40px;
+        width:400px;
+        margin-left:110px;
+        border:1px solid gray;
+         border-radius: 4px;
+        background-color:blue;
+        color:white;
+        font-weight: bold;
+        font-size:20px;
+        text-align:center;
+        }
+    </style>
+</head>
+<body>
+<h1>User Form</h1>
+<form action="#" th:action="@{/submitForm}" th:object="${user}" method="post">
+    <label for="toemail">Toemail:</label>
+    <input type="text" id="toemail" th:field="*{toemail}" /><br/><br/>
+
+    <label for="cc">CC:</label>
+    <input type="text" id="cc" th:field="*{cc}" /><br/><br/>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" th:field="*{subject}" /><br/><br/>
+    <label for="body">Body:</label>
+    <input type="text" id="body" th:field="*{body}" /><br/><br/>
+    <label for="filepath">FilePath:</label>
+    <input type="text" id="filepath" th:field="*{filepath}" /><br/><br/>
+    <button type="submit" id="btn">Submit</button>
+</form>
+</body>
+</html>

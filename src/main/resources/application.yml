@@ -1,0 +1,20 @@
+server:
+    port: 8082
+servlet:
+    context-path: /
+spring:
+    application:
+        name: thymeleafdemotask
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: sachinka417@gmail.com
+        password: zyjoremvxwyplglx
+        protocol: smtp
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+                    ssl.trust: smtp.gmail.com
